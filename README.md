@@ -66,4 +66,4 @@ Hasil `map()` dibungkus `list(...)` karena `map()` secara default mengembalikan 
 
 ## Catatan
 
-Ketiga pendekatan di atas **menghasilkan output CSV yang identik** karena menjalankan aturan transformasi yang sama persis. Perbedaannya murni pada gaya/paradigma penulisan kode, bukan pada hasil akhirnya — ini untuk menunjukkan bahwa satu masalah yang sama bisa diselesaikan dengan beberapa cara berbeda di Python.
+Ketiga pendekatan di atas **menghasilkan output CSV yang identik** karena menjalankan aturan transformasi yang sama persis. Perbedaannya pada gaya penulisan kode, bukan pada hasil akhirnya — ini untuk menunjukkan bahwa satu masalah yang sama bisa diselesaikan dengan beberapa cara berbeda di Python.

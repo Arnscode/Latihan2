@@ -45,25 +45,6 @@ Setiap skrip akan mencetak pesan konfirmasi, contoh:
 [SUCCESS] Data berhasil disimpan di: data/products_loop.csv
 ```
 
-## Penjelasan Tiap Pendekatan
-
-### 1. `products_loop.py` — Standard For Loop
-Memproses data satu per satu secara eksplisit: buat list kosong, looping tiap item, cek kondisi `is_available` dengan `if`, lalu `append()` hasilnya kalau lolos. Paling mudah dibaca langkah demi langkah, cocok untuk memahami logika dasarnya terlebih dahulu.
-
-### 2. `products_lc.py` — List & Dict Comprehension
-Logika yang sama persis dengan for loop, tapi dipadatkan menjadi satu ekspresi:
-```python
-[hasil_transformasi for item in items if kondisi]
-```
-Lebih ringkas dan umum dipakai di kode Python yang idiomatis (pythonic).
-
-### 3. `products_fp.py` — Functional Programming (filter + map + lambda)
-Memisahkan proses menjadi dua tahap menggunakan fungsi bawaan Python:
-- `filter(lambda item: ..., items)` → menyaring item yang `is_available == True`.
-- `map(lambda item: {...}, filtered_items)` → mengubah format tiap item yang lolos filter.
-
-Hasil `map()` dibungkus `list(...)` karena `map()` secara default mengembalikan objek *lazy iterator*, bukan list biasa.
-
 ## Catatan
 
 Ketiga pendekatan di atas **menghasilkan output CSV yang identik** karena menjalankan aturan transformasi yang sama persis. Perbedaannya pada gaya penulisan kode, bukan pada hasil akhirnya — ini untuk menunjukkan bahwa satu masalah yang sama bisa diselesaikan dengan beberapa cara berbeda di Python.
